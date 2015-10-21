@@ -1,4 +1,4 @@
-def divisor(n)          # 100 % ( ) == 0  (1,2,10, 20, etc)
+def divisor(n)          # To get all the possible divisors
   arr_divisors=[]
   for i in 1..n  # two dots excludes n...three dots included n
     if(n % i == 0)
@@ -8,10 +8,10 @@ def divisor(n)          # 100 % ( ) == 0  (1,2,10, 20, etc)
   return arr_divisors
 end
 
-def prime(n)
+def prime(n)            #Of all the possible divisors, we now need to get the ones that are only prime
   arr_prime=[]
   for i in 1..n
-    if(divisor(i).length < 3)
+    if(divisor(i).length < 3)   #We know that prime numbers only have 2 divisors...at anytime.
       arr_prime.push(i)
     end
   end
